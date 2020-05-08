@@ -9,8 +9,8 @@ var db = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "",
-  database: "taskManager_db"
+  password: "password",
+  database: "books_db"
 });
 }
 
