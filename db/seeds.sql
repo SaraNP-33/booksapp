@@ -7,3 +7,15 @@ VALUES ("Les Fleurs Du Mal", "Charles Beaudelaire"),
 VALUES ("Castelos de Raiva", "Alessandro Barrico", true),
         ("Mensagem", "Fernando Pessoa", true),
         ("Mrs. Dalloway", "Virginia Woolf", true)
+
+
+
+        INSERT INTO books (title)
+VALUES ("Les Fleurs Du Mal"),
+        ("Livro do Desassossego"),
+        ("Leaves of Grass");
+
+        INSERT INTO books (title,devoured)
+VALUES ("Castelos de Raiva", true),
+        ("Mensagem", true),
+        ("Mrs. Dalloway", true)

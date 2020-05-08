@@ -18,7 +18,7 @@ var Book ={
     },
     delete:function(condition,cb){
         orm.delete("books",condition,function(res){
-            cd(res);
+            cb(res);
         })
     }
 };

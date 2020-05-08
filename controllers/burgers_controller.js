@@ -16,9 +16,9 @@ router.get("/",function(req,res){
 
 router.post ("/api/books", function(req,res){
     Book.create([
-        "name", "devoured"
+        "title", "devoured"
     ],[
-        req.body.name, req.body.devoured
+        req.body.title, req.body.devoured
     ], function(result){
         res.json({id: result.inserId})
     });
