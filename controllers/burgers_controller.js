@@ -16,12 +16,12 @@ router.get("/",function(req,res){
 });
 
 router.post ("/api/books", function(req,res){
-    console.log(req.body);
+    console.log(req.body.devoured);
     console.log("--------------------------------------")
     Book.create([
         "title", "devoured"
     ],[
-        req.body.title, req.body.devoured
+        req.body.title, 0
     ], function(result){
         res.json({id: result.inserId})
     });
@@ -29,6 +29,8 @@ router.post ("/api/books", function(req,res){
 });
 
 router.put("/api/books/:id", function(req,res){
+    console.log(req.body)
+    console.log("##########################")
     var condition = "id =" + req.params.id;
 
     console.log("condition", condition);

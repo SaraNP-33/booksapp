@@ -1,17 +1,14 @@
 $(function(){
-    $("change-devour").on("click", function(event) {
+    $(".change-devour").on("click", function(event) {
         var id = $(this).data("id");
         var newdevour = $(this).data("devoured");
-    
-        var newDevourState = {
-          devoured: newdevour
-        };
+        console.log("change devour")
   
     
    // Send the PUT request.
    $.ajax("/api/books/" + id, {
     type: "PUT",
-    data: newDevourState
+    data:{devoured: newdevour}
   }).then(
     function() {
       console.log("changed book to", newdevour);

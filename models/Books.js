@@ -13,7 +13,7 @@ var Book ={
         });
     },
     update: function(objColsVals, condition,cb){
-        orm.update("books",objColVals, condition,function(res){
+        orm.update("books",objColsVals, condition,function(res){
             cb(res);
         })
     },
