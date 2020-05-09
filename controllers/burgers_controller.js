@@ -10,11 +10,14 @@ router.get("/",function(req,res){
             books:data
         };
         console.log(renderhbs);
+        console.log("*********************************")
         res.render("index", renderhbs);
     });
 });
 
 router.post ("/api/books", function(req,res){
+    console.log(req.body);
+    console.log("--------------------------------------")
     Book.create([
         "title", "devoured"
     ],[
@@ -22,6 +25,7 @@ router.post ("/api/books", function(req,res){
     ], function(result){
         res.json({id: result.inserId})
     });
+
 });
 
 router.put("/api/books/:id", function(req,res){

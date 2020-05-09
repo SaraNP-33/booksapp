@@ -55,6 +55,7 @@ function printQuestionMarks(num) {
       queryString += ") ";
   
       console.log(queryString);
+      
   
       db.query(queryString, vals, function(err, result) {
         if (err) {

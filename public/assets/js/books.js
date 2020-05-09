@@ -1,5 +1,5 @@
 $(function(){
-    $("change-devoured").on("click", function(event) {
+    $("change-devour").on("click", function(event) {
         var id = $(this).data("id");
         var newdevour = $(this).data("devoured");
     
@@ -27,6 +27,7 @@ $(".create-form").on("submit", function(event) {
 
     var newBook = {
       title: $("#title").val().trim(),
+      devoured:false
      
     };
 

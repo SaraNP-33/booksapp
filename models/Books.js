@@ -9,10 +9,11 @@ var Book ={
     create: function(cols, vals, cb){
         orm.create("books", cols, vals,function(res){
             cb(res);
+            
         });
     },
     update: function(objColsVals, condition,cb){
-        orm.update("books",obkColVals, condition,function(res){
+        orm.update("books",objColVals, condition,function(res){
             cb(res);
         })
     },

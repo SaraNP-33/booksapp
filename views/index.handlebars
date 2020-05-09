@@ -4,9 +4,9 @@
 
 <ul>
     {{#each books}}
-    {{#unless devoured}}
-    {{> books/books-block devoured=true}}
-    {{/unless}}
+        {{#unless devoured}}
+            {{> books/books-block devoured=true}}
+        {{/unless}}
     {{/each}}
 </ul>
 
@@ -14,9 +14,9 @@
 
 <ul>
     {{#each books}}
-    {{#if devoured}}
-    {{> books/books-block devoured=false}}
-    {{/if}}
+        {{#if devoured}}
+             {{> books/books-block devoured=false}}
+        {{/if}}
     {{/each}}
 </ul>
 
@@ -29,6 +29,7 @@
 <div class="form-group">
     <label for="book"> Book Title:</label>
     <input type= "text" id="title" name="name">
+    
 </div>
 
 <button type="submit">Add a Book</button>
