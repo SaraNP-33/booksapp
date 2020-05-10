@@ -1,25 +1,43 @@
-<h1>Book Paradise!</h1>
+<div class="jumbotron ">
+  <h1 class="display-4 ">Book Paradise!</h1>
+</div>
+
+
+<div class="container">
+
+ <div class=  "row col-sm-12 d-flex justify-content-center">
+<!---row/column with books to devour--->
+<div class="row todevour col-sm-4">
 
 <h2>Books to devour!</h2>
 
-<ul>
+<ol>
     {{#each books}}
         {{#unless devoured}}
             {{> books/books-block devoured=true}}
         {{/unless}}
     {{/each}}
-</ul>
+</ol>
+</div>
 
+<!---row with books that were devoured--->
+
+<div class="row devoured col-sm-4">
 <h2>Books Devoured </h2>
-
-<ul>
+<ol>
     {{#each books}}
         {{#if devoured}}
              {{> books/books-block devoured=false}}
         {{/if}}
     {{/each}}
-</ul>
+</ol>
+</div>
 
+
+
+
+<!---end o main row--->
+</div> 
 <h2>Add a Book</h2>
 <form class="create-form" action="/" method="POST">
 {{!-- <div class="form-group">
@@ -35,3 +53,5 @@
 <button type="submit">Add a Book</button>
 
 </form>
+<!---end of container----->
+</div>
