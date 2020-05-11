@@ -3,14 +3,14 @@
 </div>
 
 
-<div class="container">
 
- <div class=  "row col-sm-12 d-flex justify-content-center">
+ <div class=  "row col-md-12 d-flex justify-content-center">
 <!---row/column with books to devour--->
-<div class="row todevour col-sm-4">
+<div class="row todevour col-md-6">
 
-<h2>Books to devour!</h2>
+<h2 id="heading">Books to devour!</h2>
 
+<div class="col reading-list">
 <ol>
     {{#each books}}
         {{#unless devoured}}
@@ -19,11 +19,14 @@
     {{/each}}
 </ol>
 </div>
+</div>
 
 <!---row with books that were devoured--->
 
-<div class="row devoured col-sm-4">
-<h2>Books Devoured </h2>
+<div class="row devoured col-md-6">
+
+<h2 id="heading2">Books Devoured </h2>
+<div class="col read-again">
 <ol>
     {{#each books}}
         {{#if devoured}}
@@ -32,13 +35,15 @@
     {{/each}}
 </ol>
 </div>
+</div>
 
 
 
 
 <!---end o main row--->
 </div> 
-<h2>Add a Book</h2>
+
+<h2 id="add">Add a Book</h2>
 <form class="create-form" action="/" method="POST">
 {{!-- <div class="form-group">
     <label for="book"> Book Author:</label>
@@ -53,5 +58,4 @@
 <button type="submit">Add a Book</button>
 
 </form>
-<!---end of container----->
-</div>
+

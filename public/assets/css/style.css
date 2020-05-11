@@ -6,3 +6,55 @@
     color:#000080;
 }
 
+
+#heading{
+    font-family:"Lobster", cursive ;
+    color:#000080;
+    text-align: center;
+
+}
+#heading2{
+    font-family:"Lobster", cursive ;
+    color:#000080;
+    text-align: center;
+   
+  
+}
+
+.todevour ol{
+    
+    margin-top:30px;
+    font-family:'Kreon', serif;
+
+}
+
+.devoured ol{
+   
+    margin-top:30px;
+    font-family:'Kreon', serif;
+}
+
+.reading-list ol{
+    margin-right:120px;
+
+}
+
+.read-again ol{
+    margin-left:90px;
+
+}
+
+.create-form{
+   position:absolute;
+   left:40%;
+   top:80%;
+    padding:30px;
+    font-family: "Kreon", serif;
+    color:#000080;
+}
+#add{
+    margin-top:6%;
+    text-align: center;
+    font-family: "Lobster", cursive;
+    color:#000080;
+};
