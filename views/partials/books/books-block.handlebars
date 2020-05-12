@@ -1,7 +1,11 @@
 <li>
-    {{title}}
-    <button class="change-devour" data-id="{{id}}" data-devoured="{{devoured}}">
-        {{#if devoured}} Devour Book! {{else}}Read it again!{{/if}}
-    </button>
-    <button class="delete-book" data-id="{{id}}">Delete!</button>
+    <div class="d-flex flex-row justify-content-between">
+        {{title}}
+    <div class="mb-2 d-flex justify-content-end">
+        <button class="change-devour ml-3" data-id="{{id}}" data-devoured="{{devoured}}">
+            {{#if devoured}} Devour! {{else}}Read again!{{/if}}
+        </button>
+        <button class="delete-book ml-2" data-id="{{id}}">Delete!</button>
+    </div>
+    </div>
 </li>
