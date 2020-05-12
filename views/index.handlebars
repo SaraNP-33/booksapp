@@ -2,60 +2,61 @@
   <h1 class="display-4 ">Book Paradise!</h1>
 </div>
 
+<div class="container">
 
+    <div class=  "row col-sm-12 d-flex justify-content-between">
 
- <div class=  "row col-md-12 d-flex justify-content-center">
-<!---row/column with books to devour--->
-<div class="row todevour col-md-6">
+    <!---row/column with books to devour--->
+    <div class="row todevour col-sm-6">
+        <div class="mt-2 col-sm-12 text-center"> <!-- ***** MOVED THIS FROM BELOW LINE 12 TO ABOVE LINE 12 ***** -->
+            <h2 id="heading">Books to devour!</h2>
+        </div> <!-- ***** END HEADING ROW ***** -->
+        <div class="row col-sm-12"> <!-- ***** GIVING LIST IT'S OWN ROW ***** -->
+            <ol>
+                {{#each books}}
+                    {{#unless devoured}}
+                        {{> books/books-block devoured=true}}
+                    {{/unless}}
+                {{/each}}
+            </ol>
+        </div>
+    </div>
 
-<h2 id="heading">Books to devour!</h2>
+    <!---row with books that were devoured--->
+    <div class="row devoured col-sm-6">   <!-- ***** CHANGED COL-SM TO 6 SINCE PARENT WAS 12 & HAVE 2 COL'S ***** -->
+        <div class="mt-2 col-sm-12">  
+            <h2 id="heading">Books Devoured </h2>
+            <div class="content">
+            <ol>
+                {{#each books}}
+                    {{#if devoured}}
+                         {{> books/books-block devoured=false}}
+                    {{/if}}
+                {{/each}}
+            </ol>
+            </div>
 
-<div class="col reading-list">
-<ol>
-    {{#each books}}
-        {{#unless devoured}}
-            {{> books/books-block devoured=true}}
-        {{/unless}}
-    {{/each}}
-</ol>
-</div>
-</div>
+        </div> 
+    </div>
 
-<!---row with books that were devoured--->
+    </div>   <!---end o main row--->
 
-<div class="row devoured col-md-6">
+<!-- ***** CHANGED COL TO 12 TO TAKE UP ENTIRE ROW ***** -->
+<!-- ***** ALSO ADDED CENTERING CLASSES ***** -->
+    <div class="row add col-sm-12 d-flex justify-content-center text-center"> 
+        <h2 id="add">Add a Book</h2>
+    </div> <!-- ***** ENDED HEADING ROW ***** -->
+    <div class= "row col-sm-12 d-flex justify-content-center text-center"> <!-- *** GAVE THE FORM IT'S OWN ROW *** -->
+        <form class="create-form" action="/" method="POST">
+            <div class="row form-group">
+                {{!-- <label for="book"> Book Title:</label> ***** REPLACED WITH PLACEHOLDER TEXT ***** --}}
+                <!-- *** ADDED PLACEHOLDER AND CENTERING CLASS *** -->
+                <input class="text-center" type= "text" id="title" name="name" placeholder="Enter Book Title"> 
+            </div>
+            
+            <button class="Mb-5" type="submit">Add a Book</button> <!-- ADDED MARGIN BOTTOM -->
+        </form>
+    </div>
 
-<h2 id="heading2">Books Devoured </h2>
-<div class="col read-again">
-<ol>
-    {{#each books}}
-        {{#if devoured}}
-             {{> books/books-block devoured=false}}
-        {{/if}}
-    {{/each}}
-</ol>
-</div>
-</div>
-
-
-
-
-<!---end o main row--->
-</div> 
-
-<h2 id="add">Add a Book</h2>
-<form class="create-form" action="/" method="POST">
-{{!-- <div class="form-group">
-    <label for="book"> Book Author:</label>
-    <input type= "text" id="book" name="name">
-</div> --}}
-<div class="form-group">
-    <label for="book"> Book Title:</label>
-    <input type= "text" id="title" name="name">
-    
-</div>
-
-<button type="submit">Add a Book</button>
-
-</form>
+</div>  {{!-- ***** END OF CONTAINER ***** --}}
 
