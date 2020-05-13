@@ -42,7 +42,7 @@ The user can also decide that they want to delete a book completly from their li
 
 For this project th instalation of three diferent npm packages to complete the app was required.
 
-MySql npm pqckqge allows to connect to the a Mysql database and work with through the command line.
+MySql npm package allows to connect to the a Mysql database and work with through the command line.
 
 ````
 npm install mysql
