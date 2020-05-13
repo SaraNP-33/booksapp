@@ -48,8 +48,14 @@
     font-family: "Lobster", cursive;
     color:#000080;
 };
-.change-devour{
-    border-radius: 3% !important;
-    background-color: #FF8C00 !important;
-    color:#000080 !important;
+input{
+    background-color:inherit;
+    color:inherit;
+    border-radius: inherit;
+};
+
+button{
+    background-color: #FF8C00;
+    color:#000080;
+    border-radius:4%;
 };
