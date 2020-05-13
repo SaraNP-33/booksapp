@@ -36,7 +36,7 @@ If you are anything like me, reading a book once is not enough. The user has the
 
 The user can also decide that they want to delete a book completly from their lists. When the user clicks that burron a request is sent to the server to delete the book from the database. There is a set of instructions sent to the database then to execute the deletion which in turn is seen by the user through the book being deleted on the page. 
 
-![delete](./public/assets/images/Delete.git)
+![delete](./public/assets/images/Delete.gif)
 
 # Instalation
 
